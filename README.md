@@ -33,5 +33,11 @@ It includes:
 - Data files are not included
 - Replace placeholder paths with your own data paths
 
+## Example Output
+This pipeline generates:
+- PCA plots
+- Volcano plots
+- Heatmaps of top genes
+
 ## Author
 Hager Salah Abouelnaga
