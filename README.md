@@ -44,5 +44,13 @@ This pipeline generates the following key outputs:
 
 ![Volcano Plot](Volcano_plot.png)
 
+### Volcano Plot Example
+
+![Volcano Plot](Volcano_plot.png)
+
+This volcano plot shows significantly differentially expressed genes based on log2 fold change and p-value thresholds.
+
+Note: This figure is for demonstration purposes and does not include identifiable or sensitive data.
+
 ## Author
 Hager Salah Abouelnaga
