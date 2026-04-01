@@ -64,5 +64,15 @@ Gene Set Enrichment Analysis (GSEA) highlighting significantly upregulated and d
 
 Note: Results are presented in a simplified format for demonstration purposes.
 
+## Additional Analysis
+
+This project also includes extended downstream analyses such as:
+
+- Gene set enrichment visualization (dot plots and enrichment plots)
+- Identification and ranking of significant genes
+- Functional interpretation of differentially expressed genes
+
+Note: Some visualizations are not displayed to avoid sharing sensitive or unpublished data.
+
 ## Author
 Hager Salah Abouelnaga
