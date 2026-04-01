@@ -12,12 +12,41 @@ It includes:
 - Heatmap of top differentially expressed genes
 
 ## Tools & Packages
+- R
 - DESeq2
 - tidyverse
+- clusterProfiler
+- GSVA
 - EnhancedVolcano
 - ComplexHeatmap
 - AnnotationDbi
 - org.Hs.eg.db
+
+## How to Run
+
+### 1. Prepare input data
+- RNA-seq count files (e.g., featureCounts output)
+- Metadata file (coldata.csv) with sample information
+
+### 2. Set file paths
+Open the script and update the following paths:
+
+counts_dir <- "path/to/count_files/"
+coldata_file <- "path/to/coldata.csv"
+output_dir <- "path/to/results/"
+
+### 3. Run the pipeline
+
+In R or terminal:
+
+Rscript 01_deseq2_pipeline.R
+
+### 4. Output
+Results will be saved in the output directory, including:
+- Differential expression results (Excel)
+- PCA plot
+- Volcano plot
+- GSEA results
 
 ## Input Requirements
 - Gene count files (e.g., featureCounts output)
