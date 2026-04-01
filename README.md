@@ -103,6 +103,16 @@ Gene Set Enrichment Analysis (GSEA) highlighting significantly upregulated and d
 
 Note: Results are presented in a simplified format for demonstration purposes.
 
+## Translational Relevance
+
+This pipeline goes beyond standard differential expression by integrating:
+
+- Functional pathway analysis (GSEA / ssGSEA)
+- Drug-response signature identification (Venetoclax resistance)
+- Clinical validation using survival analysis (TCGA)
+
+This is a translational workflow connecting molecular data to clinical outcomes.
+
 ### Additional Analysis
 
 This project also includes extended downstream analyses such as:
@@ -131,16 +141,6 @@ A Venetoclax-related gene signature was identified by intersecting significantly
 This highlights potential molecular mechanisms driving drug resistance in AML models.
 
 Note: Full gene lists are not displayed due to data sensitivity.
-
-## Translational Relevance
-
-This pipeline goes beyond standard differential expression by integrating:
-
-- Functional pathway analysis (GSEA / ssGSEA)
-- Drug-response signature identification (Venetoclax resistance)
-- Clinical validation using survival analysis (TCGA)
-
-This is a translational workflow connecting molecular data to clinical outcomes.
 
 ## Clinical Validation (Survival Analysis)
 
