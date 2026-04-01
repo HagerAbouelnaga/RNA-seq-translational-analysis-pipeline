@@ -113,7 +113,23 @@ This project also includes extended downstream analyses such as:
 
 Note: Some visualizations are not displayed to avoid sharing sensitive or unpublished data.
 
-## 🔬 Translational Relevance
+## Stemness Analysis (ssGSEA)
+
+Single-sample Gene Set Enrichment Analysis (ssGSEA) was performed using MSigDB C8 cell-type gene sets to estimate stemness-related enrichment scores.
+
+This analysis provides insight into stem-like transcriptional programs associated with resistance phenotypes.
+
+Note: Sample group labels are anonymized to preserve data confidentiality.
+
+## Drug Resistance Signature (Venetoclax)
+
+A Venetoclax-related gene signature was identified by intersecting significantly upregulated genes with known apoptosis and BCL2-family genes.
+
+This highlights potential molecular mechanisms driving drug resistance in AML models.
+
+Note: Full gene lists are not displayed due to data sensitivity.
+
+## Translational Relevance
 
 This pipeline goes beyond standard differential expression by integrating:
 
@@ -122,6 +138,20 @@ This pipeline goes beyond standard differential expression by integrating:
 - Clinical validation using survival analysis (TCGA)
 
 This is a translational workflow connecting molecular data to clinical outcomes.
+
+## Clinical Validation (Survival Analysis)
+
+To assess clinical relevance, survival analysis was performed using publicly available datasets:
+
+- TCGA (The Cancer Genome Atlas)
+- TARGET AML dataset
+- BeatAML cohort
+
+Kaplan-Meier survival curves and Cox proportional hazards models were applied to evaluate prognostic significance of selected genes.
+
+Example survival plots are shown below.
+
+Note: Only representative results are displayed.
 
 ## Author
 Hager Salah Abouelnaga
