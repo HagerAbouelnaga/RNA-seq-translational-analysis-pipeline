@@ -24,7 +24,7 @@ library(ComplexHeatmap)
 
 library(openxlsx)  
 
-# for write.xlsx library(ggrepel) 
+library(ggrepel) 
 
 #------------------------- 
 
@@ -288,7 +288,7 @@ lab = res_df$SYMBOL,
 
 x = 'log2FoldChange',  
 
-y = 'pvalue',  
+y = 'padj',  
 
 pCutoff = 0.05,  
 
@@ -296,33 +296,35 @@ FCcutoff = 1.5,
 
 title = paste0(contrast_name, " volcano"))  
 
-ggsave(file.path(output_dir, paste0("Volcano_", contrast_name, ".png")), width = 7, height = 6)  
+ggsave(file.path(output_dir, paste0("Volcano_plot.png", contrast_name, ".png")), width = 7, height = 6)  
 
 } 
 
 # Extract significant genes
-sig_genes <- res_df %>%
-  filter(!is.na(padj), padj < 0.05)
+if (exists("res_df")) {
 
-# Upregulated genes
-up_genes <- sig_genes %>%
-  filter(log2FoldChange > 0)
+  sig_genes <- res_df %>%
+    filter(!is.na(padj), padj < 0.05)
 
-# Downregulated genes
-down_genes <- sig_genes %>%
-  filter(log2FoldChange < 0)
+  up_genes <- sig_genes %>%
+    filter(log2FoldChange > 0)
 
-# Top 20 genes
-top20_up <- up_genes %>%
-  arrange(desc(log2FoldChange)) %>%
-  head(20)
+  down_genes <- sig_genes %>%
+    filter(log2FoldChange < 0)
 
-top20_down <- down_genes %>%
-  arrange(log2FoldChange) %>%
-  head(20)
+  top20_up <- up_genes %>%
+    arrange(desc(log2FoldChange)) %>%
+    head(20)
 
-write.csv(top20_up, "top20_upregulated.csv")
-write.csv(top20_down, "top20_downregulated.csv")
+  top20_down <- down_genes %>%
+    arrange(log2FoldChange) %>%
+    head(20)
+
+  write.csv(top20_up, "top20_upregulated.csv")
+  write.csv(top20_down, "top20_downregulated.csv")
+
+  message("Extracted top upregulated and downregulated genes.")
+}    
 
 #------------------------- 
 
